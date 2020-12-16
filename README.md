@@ -1,11 +1,3 @@
-# Creating a CardView
-## Starting Project
+# iOS App Dev Tutorial in SwiftUI by Apple | Follow along
 
-Use this project to code along with the [Creating a CardView](https://developer.apple.com/tutorials/app-dev-training/creating-a-cardview) tutorial.
-
-## Change Log
-### Models/Color+Codable.swift
-* Adds `Codable` conformance to `Color`
-* Adds property to generate a random color
-
-
+https://developer.apple.com/tutorials/app-dev-training/
