@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396D90952589B8C10056ED6E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396D90942589B8C10056ED6E /* EditView.swift */; };
 		39B2F3C2258953CB002A7098 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2F3C1258953CB002A7098 /* DailyScrum.swift */; };
 		39B2F3C525896A6F002A7098 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2F3C425896A6F002A7098 /* CardView.swift */; };
 		39B2F3C925896DEF002A7098 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2F3C825896DEF002A7098 /* ScrumsView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		396D90942589B8C10056ED6E /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		39B2F3C1258953CB002A7098 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		39B2F3C425896A6F002A7098 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Scrumdinger/CardView.swift; sourceTree = SOURCE_ROOT; };
 		39B2F3C825896DEF002A7098 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrumsView.swift; path = Scrumdinger/ScrumsView.swift; sourceTree = SOURCE_ROOT; };
@@ -79,6 +81,7 @@
 				AA65BF4324F4604A007E4A1B /* Models */,
 				AA8ACE8324F44E01007DA4D8 /* ScrumdingerApp.swift */,
 				39B2F3C425896A6F002A7098 /* CardView.swift */,
+				396D90942589B8C10056ED6E /* EditView.swift */,
 				39B2F3C825896DEF002A7098 /* ScrumsView.swift */,
 				39B2F3CE258996E7002A7098 /* DetailView.swift */,
 				AA8ACE8524F44E01007DA4D8 /* MeetingView.swift */,
@@ -177,6 +180,7 @@
 			files = (
 				39B2F3C2258953CB002A7098 /* DailyScrum.swift in Sources */,
 				39B2F3C925896DEF002A7098 /* ScrumsView.swift in Sources */,
+				396D90952589B8C10056ED6E /* EditView.swift in Sources */,
 				AA8ACE8624F44E01007DA4D8 /* MeetingView.swift in Sources */,
 				39B2F3CF258996E7002A7098 /* DetailView.swift in Sources */,
 				AA65BF4524F4605F007E4A1B /* Color+Codable.swift in Sources */,
