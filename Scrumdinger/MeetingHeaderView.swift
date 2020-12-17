@@ -11,15 +11,19 @@ struct MeetingHeaderView: View {
     @Binding var secondsElapsed: Int
     @Binding var secondsRemaining: Int
 
+    let scrumColor: Color
+
     //calculating progress and updating progress view
     private var progress: Double {
         guard secondsRemaining > 0 else { return 1 }
         let totalSeconds = Double(secondsRemaining + secondsElapsed)
         return Double(secondsElapsed) / totalSeconds
     }
+
     private var minutesRemaining: Int {
         secondsRemaining / 60
     }
+
     private var minutesRemaningMetric: String {
         minutesRemaining == 1 ? "minute" : "minutes"
     }
@@ -27,6 +31,7 @@ struct MeetingHeaderView: View {
     var body: some View {
         VStack {
             ProgressView(value: progress)
+                .progressViewStyle(ScrumProgressViewStyle(scrumColor: scrumColor))
             HStack {
                 VStack(alignment: .leading) {
                     Text("Seconds Elapsed")
@@ -37,19 +42,23 @@ struct MeetingHeaderView: View {
                 VStack(alignment: .trailing) {
                     Text("Seconds Remaining")
                         .font(.caption)
-                    Label("\(secondsRemaining)", systemImage: "hourglass.tophalf.fill")
+                    HStack {
+                        Text("\(secondsRemaining)")
+                        Image(systemName: "hourglass.tophalf.fill")
+                    }
                 }
             }
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("Time remaining"))
         .accessibilityValue(Text("\(minutesRemaining) \(minutesRemaningMetric)"))
+        .padding([.top, .horizontal])
     }
 }
 
 struct MeetingHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingHeaderView(secondsElapsed: .constant(60), secondsRemaining: .constant(300))
+        MeetingHeaderView(secondsElapsed: .constant(60), secondsRemaining: .constant(300), scrumColor: DailyScrum.data[0].color)
             .previewLayout(.sizeThatFits)
     }
 }
